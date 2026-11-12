@@ -1,0 +1,56 @@
+import { defineConfig } from 'vitepress'
+
+// GitHub Pages 프로젝트 사이트는 https://<사용자명>.github.io/<저장소명>/ 에서 열린다.
+// 저장소 이름을 바꾸면 아래 REPO_NAME도 같이 바꿔야 CSS와 링크가 깨지지 않는다.
+const REPO_NAME = 'FDE_CS_Notes'
+const GITHUB_USER = 'JJonyeok2'
+
+const topics = [
+  { text: '1. 네트워크와 HTTP', link: '/01-network-http' },
+  { text: '2. API와 인증', link: '/02-api-auth' },
+  { text: '3. 데이터베이스와 SQL', link: '/03-database-sql' },
+  { text: '4. 데이터 통합', link: '/04-data-integration' },
+  { text: '5. OS, 리눅스, 컨테이너', link: '/05-os-linux-container' },
+  { text: '6. 클라우드와 배포', link: '/06-cloud-deploy' },
+  { text: '7. 보안과 권한', link: '/07-security' },
+  { text: '8. 시스템 설계 기초', link: '/08-system-design' },
+  { text: '9. LLM 응용', link: '/09-llm-application' },
+  { text: '10. 자료구조와 알고리즘', link: '/10-ds-algo' }
+]
+
+export default defineConfig({
+  lang: 'ko-KR',
+  title: 'FDE CS 노트',
+  description: 'FDE(Forward Deployed Engineer) 지원자가 알아야 할 CS 지식 정리',
+  base: `/${REPO_NAME}/`,
+  cleanUrls: true,
+  lastUpdated: true,
+  themeConfig: {
+    nav: [
+      { text: '홈', link: '/' },
+      { text: '학습 로드맵', link: '/roadmap' },
+      { text: '문서 템플릿', link: '/template' }
+    ],
+    sidebar: [
+      {
+        text: '시작하기',
+        items: [
+          { text: 'FDE와 CS 지식', link: '/' },
+          { text: '학습 로드맵', link: '/roadmap' },
+          { text: '문서 템플릿', link: '/template' }
+        ]
+      },
+      { text: '주제별 정리', items: topics }
+    ],
+    outline: { level: [2, 3], label: '이 페이지에서' },
+    search: { provider: 'local' },
+    socialLinks: [
+      { icon: 'github', link: `https://github.com/${GITHUB_USER}/${REPO_NAME}` }
+    ],
+    docFooter: { prev: '이전', next: '다음' },
+    lastUpdated: { text: '마지막 수정' },
+    returnToTopLabel: '맨 위로',
+    sidebarMenuLabel: '목차',
+    darkModeSwitchLabel: '테마'
+  }
+})

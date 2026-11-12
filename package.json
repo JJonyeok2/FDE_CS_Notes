@@ -1,0 +1,15 @@
+{
+  "name": "fde-cs-notes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FDE 지원자를 위한 CS 지식 정리",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
