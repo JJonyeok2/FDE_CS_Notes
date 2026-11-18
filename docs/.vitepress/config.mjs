@@ -18,6 +18,12 @@ const topics = [
   { text: '10. 자료구조와 알고리즘', link: '/10-ds-algo' }
 ]
 
+const fieldTopics = [
+  { text: '11. 트러블슈팅 방법론', link: '/11-troubleshooting' },
+  { text: '12. 고객 요구사항과 PoC', link: '/12-customer-poc' },
+  { text: '13. 테스트', link: '/13-testing' }
+]
+
 export default defineConfig({
   lang: 'ko-KR',
   title: 'FDE CS 노트',
@@ -29,6 +35,7 @@ export default defineConfig({
     nav: [
       { text: '홈', link: '/' },
       { text: '학습 로드맵', link: '/roadmap' },
+      { text: '면접 질문 모음', link: '/interview-questions' },
       { text: '문서 템플릿', link: '/template' }
     ],
     sidebar: [
@@ -40,7 +47,12 @@ export default defineConfig({
           { text: '문서 템플릿', link: '/template' }
         ]
       },
-      { text: '주제별 정리', items: topics }
+      { text: 'CS 기초', items: topics },
+      { text: 'FDE 실무', items: fieldTopics },
+      {
+        text: '면접 대비',
+        items: [{ text: '면접 질문 모음', link: '/interview-questions' }]
+      }
     ],
     outline: { level: [2, 3], label: '이 페이지에서' },
     search: { provider: 'local' },
