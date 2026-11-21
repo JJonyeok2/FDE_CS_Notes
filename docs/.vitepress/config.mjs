@@ -24,6 +24,18 @@ const fieldTopics = [
   { text: '13. 테스트', link: '/13-testing' }
 ]
 
+const aiTopics = [
+  { text: '15. RAG와 벡터 DB 심화', link: '/15-rag-vector-db' },
+  { text: '16. Agentic Workflow와 멀티 에이전트', link: '/16-agentic-workflow' },
+  { text: '17. SDK와 AI 프레임워크', link: '/17-sdk-frameworks' },
+  { text: '18. 데이터 파이프라인', link: '/18-data-pipeline' }
+]
+
+const customerTopics = [
+  { text: '14. 기업 업무 시스템: ERP, CRM, 그룹웨어', link: '/14-enterprise-systems' },
+  { text: '19. 고객사와 산업 이해', link: '/19-industries' }
+]
+
 export default defineConfig({
   lang: 'ko-KR',
   title: 'FDE CS 노트',
@@ -49,6 +61,8 @@ export default defineConfig({
       },
       { text: 'CS 기초', items: topics },
       { text: 'FDE 실무', items: fieldTopics },
+      { text: 'AI 엔지니어링', items: aiTopics },
+      { text: '고객과 산업', items: customerTopics },
       {
         text: '면접 대비',
         items: [{ text: '면접 질문 모음', link: '/interview-questions' }]

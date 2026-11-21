@@ -33,3 +33,13 @@ npm run dev
 | 내 프로젝트와의 연결 | 직접 겪은 사례로 채우는 칸 |
 
 새 문서는 `docs/template.md` 를 복사해서 시작합니다.
+
+## 면접 질문 모음 갱신
+
+문서의 "면접 예상 질문"을 고치거나 새 문서를 추가했다면 질문 모음 페이지를 다시 만듭니다. 앵커를 빌드 결과에서 읽기 때문에 빌드를 앞뒤로 한 번씩 합니다.
+
+```bash
+npm run build
+python3 scripts/gen_questions.py
+npm run build
+```
